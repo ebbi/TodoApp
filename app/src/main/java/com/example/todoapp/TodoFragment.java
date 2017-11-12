@@ -15,8 +15,6 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 
-import java.util.UUID;
-
 public class TodoFragment extends Fragment {
 
     private static final String ARG_TODO_ID = "todo_id";
@@ -30,8 +28,7 @@ public class TodoFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
-        UUID todoId = (UUID) getArguments().getSerializable(ARG_TODO_ID);
-        mTodo = TodoModel.get(getActivity()).getTodo(todoId);
+        mTodo = new Todo();
 
     }
 
